@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Globalization;
 
+namespace course { 
 class Program
 
 {
     static void Main(string[] args)
     {
-        ///condicionais pt.1
-        Console.WriteLine("Qual a hora atual?");
+        /// defininindo variaveis de inicialização de escopo.
+        double preco = double.Parse(Console.ReadLine());
+        double desconto = 0.0;
 
-        int hora = int.Parse(Console.ReadLine());
-        if (hora < 12)
-            Console.WriteLine("Bom dia!");
-        else if (hora < 18)
-            Console.WriteLine("Boa tarde!");
-        else { Console.WriteLine("Boa noite !"); }
+        if (preco > 100.0)
+        {
+            desconto = preco * 0.1;
+        }
+        Console.WriteLine(desconto);
 
     }
-
+    }
 }
